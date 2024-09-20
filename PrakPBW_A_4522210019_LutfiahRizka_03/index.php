@@ -6,7 +6,7 @@
     <title>Landing Page - Buku Tamu</title>
 </head>
 <body>
-    <h1>Selamat Datang di Buku Tamu</h1>
+    <h1>Selamat Datang semua di Buku Tamu</h1>
     <p>Selamat datang di situs buku tamu kami. Silakan mengisi buku tamu atau melihat daftar tamu yang telah mengisi.</p>
 
     <ul>
