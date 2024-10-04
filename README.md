@@ -1,4 +1,4 @@
-# PRAKTIKUM PBW A KE 5 #
+# PRAKTIKUM PBW A KE 5 04 Oktober 2024 #
 # Welcome to My MVC Application Penjualan Barang #
 
 # Screenshoot Output Program #
