@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-##PRAKTIKUM 08 VID 1-6##
+#PRAKTIKUM 08 VID 1-6#
 
 <br> Mengcreate Package Laravel Menggunakan Herd<br>
 ![image](https://github.com/user-attachments/assets/25a2c4a6-8f4b-45ee-8235-727b055e6af7)
@@ -18,7 +18,7 @@
 <br>Styling CSS Tailwind<br>
 ![image](https://github.com/user-attachments/assets/01834b0c-0e62-43aa-84cc-bbe98a35cb16)
 
-##PRAKTIKUM 09 VID 7-12##
+#PRAKTIKUM 09 VID 7-12#
 
 <br>Menampilkan Data dari Database<br>
 ![Screenshot 2024-11-15 113928](https://github.com/user-attachments/assets/53070321-c9b5-4270-ba80-ee16a9ef0aff)
