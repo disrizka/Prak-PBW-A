@@ -37,6 +37,21 @@
 <br>Tampilan View<br>
 ![image](https://github.com/user-attachments/assets/ce2613b0-c02b-4788-8aa7-15b80123ca30)
 
+# PRAKTIKUM 10 VID 13-17 #
+<br>user already taken<br>
+![Screenshot 2024-11-25 091225](https://github.com/user-attachments/assets/1aca36f0-5624-4e22-85cf-2a165b7e7e37)
+
+<br> Button delete di view <br>
+![Screenshot 2024-11-25 104323](https://github.com/user-attachments/assets/02635e65-b7c8-49b2-8ec6-7e6f45d56476)
+
+<br> Menampilkan nama user ketik login ke akun <br>
+![Screenshot 2024-11-27 154725](https://github.com/user-attachments/assets/ae0b83a6-ddb0-4f00-bfbe-7ddb19da2c7a)
+
+<br> tampilan setelah logout <br>
+![Screenshot 2024-11-27 181038](https://github.com/user-attachments/assets/7a49b9e3-dcd5-4ba4-baba-58dbd8636ae8)
+
+
+
 
 
 
