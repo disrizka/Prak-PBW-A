@@ -18,17 +18,21 @@
             <x-table.thead>
                 <tr>
                     <x-table.th>No</x-table.th>
-                    <x-table.th>Name</x-table.th>
-                    <x-table.th>Email</x-table.th>
-                    <x-table.th>Created At</x-table.th>
-                    <x-table.th></x-table.th>
+                    <x-table.th>Name
+                    </x-table.th>
+                    <x-table.th>Email
+                    </x-table.th>
+                    <x-table.th>Creat-at
+                    </x-table.th>
                 </tr>
             </x-table.thead>
             <x-table.tbody>
                 @foreach ($users as $user )
                 <tr>
                     <x-table.td>
-                        {{$loop->iteration}}
+                    {{ $loop->iteration }}
+                        <!-- kalo data tidak beraturan maka seharusnya menggunakan iteriton :
+                         $loop->iteration -->
                     </x-table.td>
                     <x-table.td>
                         {{$user->name}}
@@ -37,11 +41,19 @@
                         {{$user->email}}
                     </x-table.td>
                     <x-table.td>
-                        {{(new \Carbon\Carbon($user->published_at))->format('d F Y')}}
+                        {{$user->created_at->format('d M Y')}} ||
+                        {{$user->created_at->diffForHumans()}}
                     </x-table.td>
                     <x-table.td>
-                        <a href="/users/{{$user->id}}"> view</a>
-                        </x-table.td>
+                        <div class="flex justify-end gap-x-2">
+                            <a href="/users/{{$user->id}}" class="hover:underline">
+                                View
+                            </a>
+                            <a href="/users/{{$user->id}}/edit" class="hover:underline">
+                                edit
+                            </a>
+                        </div>
+                    </x-table.td>
                 </tr>
                 @endforeach
             </x-table.tbody>

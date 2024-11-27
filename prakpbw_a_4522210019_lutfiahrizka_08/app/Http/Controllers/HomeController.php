@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function __invoke()
+    public function index()
     {
         return view('home'); // Pastikan view `home` sudah ada di resources/views
     }

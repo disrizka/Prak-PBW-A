@@ -1,19 +1,12 @@
-<x-app-layout title="Create User">
-    <x-slot name="heading">Create User</x-slot>
-    <form action="/users" class="space-y-6" method="post">
+<x-app-layout title="login">
+    <x-slot name="heading">Login</x-slot>
+
+    <form action="{{ route('login') }}" method="POST">
         @csrf
-        <div>
-            <label for="name">Name</label>
-            <input class="block border px-4 py-2 rounded" type="text" name="name" id="name">
-            @error('name')
-            <p class="text-red-500 text-sm mt-1">
-                {{$message}}
-            </p>
-            @enderror
-        </div>
+
         <div>
             <label for="email">Email</label>
-            <input class="block border px-4 py-2 rounded" type="email" name="email" id="email">
+            <input class="block border px-4 py-2 rounded" type="email" name="email" id="email" value="{{old('email')}}">
             @error('email')
             <p class="text-red-500 text-sm mt-1">
                 {{$message}}
@@ -30,6 +23,8 @@
             @enderror
         </div>
 
-        <x-button>Save</x-button>
+        <x-button>
+            Login
+        </x-button>
     </form>
 </x-app-layout>
