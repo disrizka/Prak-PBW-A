@@ -14,3 +14,5 @@
 <br> Video 23<br>
 <br>Verifikasi Email <br>
 <br> ![image](https://github.com/user-attachments/assets/23c49015-5536-43f1-9a61-82cdf86cf90d)<br>
+<br>![image](https://github.com/user-attachments/assets/e6628304-1fdc-443e-b744-493aae283cd0)<br>
+<br> ![image](https://github.com/user-attachments/assets/d3a283e9-f89a-47bd-a285-51aa8a4b0586)<br>
