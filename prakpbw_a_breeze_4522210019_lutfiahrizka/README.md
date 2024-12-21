@@ -11,3 +11,6 @@
 
 <br> Upload Gambar <br>
 <br> ![Screenshot 2024-12-12 172407](https://github.com/user-attachments/assets/edd2cb99-445a-450c-8555-9f417e2871c4) <br>
+<br> Video 23<br>
+<br>Verifikasi Email <br>
+<br> ![image](https://github.com/user-attachments/assets/23c49015-5536-43f1-9a61-82cdf86cf90d)<br>
