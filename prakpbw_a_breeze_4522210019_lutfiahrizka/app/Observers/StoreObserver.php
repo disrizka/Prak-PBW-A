@@ -10,5 +10,5 @@ class StoreObserver
     {
         $store->slug = str()->slug($store->name);
     }
-    public function created() {}
+ 
 }

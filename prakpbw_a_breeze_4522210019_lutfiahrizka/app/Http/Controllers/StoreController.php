@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Store;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreRequest;
 
@@ -10,6 +11,8 @@ class StoreController extends Controller
 {
     /**
      * Display a listing of the resource.
+     *
+     * 
      */
     public function index()
     {
@@ -20,6 +23,8 @@ class StoreController extends Controller
 
     /**
      * Show the form for creating a new resource.
+     *
+     
      */
     public function create()
     {
@@ -27,30 +32,40 @@ class StoreController extends Controller
             'store' => new Store(),
             'page_meta' => [
                 'title' => 'Create store',
-                'description' => 'Create new for yours',
+                'description' => 'Create new store for yours.',
                 'method' => 'post',
-                'url' => route('stores.store')
+                'url' => route('stores.store'),
             ]
-        ]);
+            ]);
     }
 
     /**
      * Store a newly created resource in storage.
+     *
+     
      */
-    public function store(StoreRequest $request)
+    public function store( StoreRequest $request)
     {
         $file = $request->file('logo');
 
-        $request->user()->stores()->create([
-            ...$request->validated(),
-            ...['logo' => $file->store('images/stores')]
-        ]);
+    // Gabungkan data yang divalidasi dengan slug dan logo
+    $data = array_merge(
+        $request->validated(),
+        [
+            'logo' => $file->store('public/images/stores'),
+            'slug' => Str::slug($request->input('name')), // Buat slug dari nama toko
+        ]
+    );
 
-        return to_route('stores.index');
+    // Simpan data toko dengan relasi ke user
+    $request->user()->stores()->create($data);
+
     }
 
     /**
      * Display the specified resource.
+     *
+   
      */
     public function show(Store $store)
     {
@@ -59,29 +74,32 @@ class StoreController extends Controller
 
     /**
      * Show the form for editing the specified resource.
+     *
+     
      */
-    public function edit(Request $request, Store $store)
+    public function edit(Store $store)
     {
-        abort_if($request->user()->isNot($store->user), 401);
         return view('stores.form', [
             'store' => $store,
             'page_meta' => [
                 'title' => 'Edit store',
                 'description' => 'Edit store:' . $store->name,
                 'method' => 'put',
-                'url' => route('stores.update', $store)
+                'url' => route('stores.update', $store),
             ]
-        ]);
+        ]); 
     }
 
     /**
      * Update the specified resource in storage.
+     *
+    
      */
     public function update(StoreRequest $request, Store $store)
     {
         $store->update([
             'name' => $request->name,
-            'description' => $request->description
+            'description' => $request->description,
         ]);
 
         return to_route('stores.index');
@@ -89,6 +107,8 @@ class StoreController extends Controller
 
     /**
      * Remove the specified resource from storage.
+     *
+     
      */
     public function destroy(Store $store)
     {
