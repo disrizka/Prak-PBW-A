@@ -67,6 +67,10 @@
 <br> Many to Many Role <br>
 ![Screenshot 2024-12-22 104859](https://github.com/user-attachments/assets/d6b9d3ac-8778-49cd-826a-1f7317a860a6)
 
+# Prak 14 Vid 26 #
+
+Redesign & Refactoring
+![Screenshot 2025-01-09 144223](https://github.com/user-attachments/assets/f707c634-82fc-4b1c-b519-d5d3eef0f948)
 
 
 
