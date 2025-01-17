@@ -1,1 +1,3 @@
-<h2 class="font-semibold tracking-tighter text-lg">{{ $slot }}</h2>
+<h2 class="font-semibold tracking-tigher text-lg">
+    {{$slot}}
+</h2>

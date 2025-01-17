@@ -1,40 +1,42 @@
 <x-app-layout>
-    @slot('title', 'Stores')
-
-
+    @slot('title','Stores')
 
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl leading-tight">
             {{ __('Stores') }}
         </h2>
     </x-slot>
 
     <x-container>
-        
-        <div class="grid grid-cols-2 gap-3">
-        @foreach ($stores as $store)
+        <div class="grid grid-cols-4 gap-6">
+            @foreach ($stores as $store)
 
-        <x-card class="p-4">
-            <img src="{{ \Illuminate\Support\Facades\Storage::url($store->logo) }}" alt="{{ $store->name }}" class="size-16 rounded-lg">
-            <x-card.header>
-                <x-card.title>{{ $store->name }}</x-card.title>
-            <x-card.description>
-                {{ $store->description }}
-            </x-card.description>
+            <x-card class="relative p-4 rounded-lg shadow-lg">
+                <a href="{{ route('stores.show', $store) }}" class="absolute inset-0 w-full h-full"></a>
+                <div class="pb-4">
+                    @if ($store->logo)
+                    <img src="{{ Storage::url($store->logo) }}" alt="{{ $store->name }}" class="rounded-lg w-full">
+                    @else
+                    <div class="h-16 w-16 rounded-lg bg-zinc-600"></div>
+                    @endif
+                </div>
 
-            @if($store->user_id == auth()->user()->id)
-                <a href="{{ route('stores.edit', $store) }}" class="underline text-blue-600">
-                    Edit 
-                </a>
+                <x-card.header>
+                    <x-card.title class="text-xl font-semibold">{{ $store->name }}</x-card.title>
+                    <x-card.description class="text-black">
+                        {{ str($store->description)->limit(10) }}
+                    </x-card.description>
 
-                @endif 
-            </x-card.header>
+                    @auth
+                    @if ($store->user_id === auth()->user()->id)
+                    <a href="{{route('stores.edit', $store)}}" class="underline text-blue-600">
+                        Edit
+                    </a>
+                    @endif
+                    @endauth
+                </x-card.header>
             </x-card>
-
-
-@endforeach
-</div>
-        
+            @endforeach
+        </div>
     </x-container>
-
 </x-app-layout>

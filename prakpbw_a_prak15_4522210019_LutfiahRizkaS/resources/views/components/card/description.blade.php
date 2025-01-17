@@ -1,3 +1,3 @@
-<div class="text-yellow-500 text-sm">
-    {{ $slot }}
+<div class="text-zinc-400 text-sm">
+    {{$slot}}
 </div>

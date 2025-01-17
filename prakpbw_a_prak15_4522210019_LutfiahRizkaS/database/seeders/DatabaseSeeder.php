@@ -2,24 +2,22 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\User;
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
+use App\Models\Store;
+
 
 class DatabaseSeeder extends Seeder
 {
     /**
      * Seed the application's database.
-     *
-     * @return void
      */
-    public function run()
+    public function run(): void
     {
-        User::create([
-            'name' => 'Lutfiah Rizka',
-            'email' => 'lutfiahrizka23@gmail.com',
-            'password' => bcrypt('password'),
-            'email_verified_at' => now(),
-        ]);
+        $this->call([RoleSeeder::class]);
+
+        Model::withoutEvents(fn() => Store::factory(5)->hasProducts(20)->create());
     }
 }
