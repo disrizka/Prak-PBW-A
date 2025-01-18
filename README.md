@@ -71,7 +71,7 @@
 
 Redesign & Refactoring
 ![Screenshot 2025-01-09 144223](https://github.com/user-attachments/assets/f707c634-82fc-4b1c-b519-d5d3eef0f948)
-# Prak 15 Vid 27 #
+# Prak 15 Vid 33 #
 
 <br> Partner Auto Active <br>
 ![Screenshot 2025-01-09 144238](https://github.com/user-attachments/assets/f5f6f6ec-5c5c-4c23-b737-2b46030775cd)
